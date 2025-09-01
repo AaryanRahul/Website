@@ -4,32 +4,249 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HHS Robotics Club</title>
-    <link rel="stylesheet" href="RoboticsWebsiteStyles.css">
-    <script type="text/javascript" src="https://gc.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=sCHntjEc0rHOZrdYTUck1J6oiaix9cdR0npQRv3K_Au_SwG85d37H5Q8306uVDsLPDgbLdPX3unv_zr8EIBKoGGejFfX1Jlq8Pqgwt_ATzoD7B8IakHCrbZYvkQ8iGCd3lEpPZ2asruSYzGFY0sKaJBrRYiETwNTJjbGHRIys6M-aw88ZPbKujg0VGw2Lh7z-_HVTIDz4Zfeh6Isu6z-ZTpadib2t3FPUTIjOelyK0Gd5-PkVCLk7_-pW5ygAALcytBUQDiEUhpi4ZcOQ3rsBWGoWrz28802hRYb1faN1q3tSxwL87caHL_OcOydzaar6eRKhYhZBsvXuF21JDD6WQPsmlGANB8Fk8dsX8sscUE78gVY6F3A-42LIJYllqvhoBEeke1-eb1jEJ99f3x4Ie-fueaHqgCbc4KGDiCU811KIDLbcU6MQLSvZTKHnnkPO1T3-Auyr47weQ-4fcg8DKh6jjHWKN3KEHsNTdVYSYuMXNjSeXD61EgYGWeFKR206frbm6n86GaXr_ZfvBiBzLf0-El-_4XB6myVr4MZ3n8wvFAVAK-iwdQpdqYeiJDdU-H2DBDFDu995ax3jUrYGvmmEmjJUyttFp_vJwLahdrsbMWlPzKYeLHq6x6z6HENm7sb7mgy03byk3450aXLXqPlRBRoTcvA9LjibtgLmy64gXBTsBXtSAbh5N5nvnn3g-kr__wIdtFtJ7uUEJUHor-lovTC710WBEx9OAIJeeF7xx12ruUvKPTvd01YccstVZds-z06b-kHz_YG6PX6vHZsCqLT51YjhBwRRWgmCLDJiMXBO79gw_U_kfsCxMBGW9LXLXOlBAhNnYSuMz4MtjFNUIDDGfKye2qLkB0TTEmKECTqLyX89MeyKR7rbn0biw8NMTF9PEJxpr0PWjo3irOGIk0t3cxa3QyZlxKiG_fC4IRSk4_YImdSdXL1gEQlW8XLiLt5_xtljMKu3sJwQvWttKPqXXoyx788_L9LT-23nR-OPyWsZEduGcPoAlLHjm53lGouPABr1g5C0cmw0F8HBqx4ZvLOoKcvmzfY_uum3Th8td9lTCH_K8xRjrTk9Lr7VxrMAvH9G2HTmJ3DOzABrmKuhOTaQ_XqRT4ClFxgp-YBuKOajyPvnVkjMiDmz7XQQHuMLlYaIBYJI3Gr46XSMNKNmBHJ3Cirl5znQTzBrZ5gDSqX9yTe6X3DfLQTSK7Wju1IqURFgLewJpYXlGozGmC8wfSdYlKkLwICyZl2FW4wG4gnGWgPpoqVU1VELDtuVvkoCW_ChFOfuh9udwnirS0NBBIppxUJE4HdIDsge6H1ecpFho3RiJ4sv0p2Ms4qcWqBdvSWp3DPg6nnDFQFTDG14dzuJo2XlyO2bTceN1Zg2HuKmZAUf8HJ2N5JLkb-yqTNgONPHLhbjhkzH4lPpZkuLMgnVsMiCVSEPnREKwPQkOVHwoMyBsNssOOd5oeCCNhFfF5d-yw_5TWwxWIHXiN0ZoO8bq1B7hWZlvU8hrPxZFkt8_cbz2wS8CgFETgWJH9B4tHYAqzFJw5bJmQMQQ3LoJXaeSoM3sgjwIw-RyYkPbg3uoaXpxtZX0N7quj8jXzC8LX48SQw2KSvcwcunPiQiManz9aJfmNI1OBlTbrMHbXG-lzyvXWK0qkOCebtNsvpicGH051CPl9MPw" nonce="6be6f61d85a9c4e32e74bbe932118b4d" charset="UTF-8"></script>
+    <style>
+        /* Global Styles */
+        :root {
+            --primary-red: #crimson;
+            --secondary-black: #000;
+            --accent-gold: #FFD700;
+            --background-white: #fff;
+            --light-gray: #f5f5f5;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: var(--background-white);
+            transition: background-color 1s ease;
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        /* Navigation */
+        .nav-links {
+            display: flex;
+            justify-content: center;
+            background-color: var(--secondary-black);
+            padding: 15px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .custom-link {
+            color: var(--background-white);
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+            font-size: 18px;
+            transition: color 0.3s;
+            padding: 5px 10px;
+            border-radius: 4px;
+        }
+        
+        .custom-link:hover {
+            color: var(--accent-gold);
+            background-color: rgba(255,255,255,0.1);
+        }
+        
+        /* Section Styles */
+        section {
+            margin: 40px 0;
+            padding: 30px;
+            background-color: var(--background-white);
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        
+        h1, h2, h3 {
+            color: var(--secondary-black);
+            margin-bottom: 20px;
+        }
+        
+        h2 {
+            border-bottom: 3px solid var(--primary-red);
+            padding-bottom: 10px;
+            margin-bottom: 25px;
+        }
+        
+        /* Header Styles */
+        header {
+            text-align: center;
+            padding: 40px 0;
+            background: linear-gradient(135deg, var(--primary-red) 0%, var(--secondary-black) 100%);
+            color: var(--background-white);
+            margin-bottom: 30px;
+            border-radius: 8px;
+        }
+        
+        .logo {
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin-bottom: 20px;
+            color: var(--accent-gold);
+        }
+        
+        .image-container {
+            margin: 20px 0;
+        }
+        
+        .image-container img {
+            max-width: 100%;
+            height: auto;
+            border: 5px solid var(--primary-red);
+            border-radius: 8px;
+        }
+        
+        /* Typography */
+        p, li {
+            font-size: 18px;
+            margin-bottom: 15px;
+        }
+        
+        ul {
+            padding-left: 30px;
+            margin-bottom: 20px;
+        }
+        
+        li {
+            margin-bottom: 10px;
+        }
+        
+        /* Team Section */
+        .team-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            gap: 20px;
+            margin: 30px 0;
+        }
+        
+        .team-member {
+            flex: 1;
+            min-width: 300px;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        
+        .role-title {
+            text-align: center;
+            margin-bottom: 20px;
+            color: var(--primary-red);
+            font-size: 24px;
+        }
+        
+        /* Challenge Boxes */
+        .challenge-box {
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+            border-left: 5px solid;
+        }
+        
+        .robot-game {
+            border-left-color: #d35400;
+            background-color: rgba(211, 84, 0, 0.1);
+        }
+        
+        .innovation-project {
+            border-left-color: #27ae60;
+            background-color: rgba(39, 174, 96, 0.1);
+        }
+        
+        /* Judging Categories */
+        .judging-categories {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+        }
+        
+        .category {
+            padding: 20px;
+            background-color: var(--light-gray);
+            border-radius: 8px;
+            text-align: center;
+        }
+        
+        /* Back to Top Links */
+        .back-to-top {
+            text-align: center;
+            margin-top: 30px;
+        }
+        
+        /* Current Team Section */
+        .current-team-member {
+            margin-bottom: 30px;
+            padding: 20px;
+            background-color: var(--light-gray);
+            border-radius: 8px;
+        }
+        
+        .current-team-member h2 {
+            border-bottom: 2px solid var(--primary-red);
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-links {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .custom-link {
+                margin: 5px 0;
+            }
+            
+            .team-container {
+                flex-direction: column;
+            }
+            
+            .logo {
+                font-size: 2rem;
+            }
+        }
+    </style>
 </head>
 <body>
     <!-- Navigation -->
     <div class="nav-links">
         <a href="#main-content" class="custom-link">Home</a>
-        <a href="#spike-fll" class="custom-link">FLL section</a>
-        <a href="#meet-the-team" class="custom-link">Available team roles</a>
-        <a href="#current-team" class="custom-link">Meet the current team!</a>
+        <a href="#spike-fll" class="custom-link">FLL Section</a>
+        <a href="#meet-the-team" class="custom-link">Team Roles</a>
+        <a href="#current-team" class="custom-link">Meet The Team</a>
     </div>
 
     <!-- Main Content -->
-    <div id="main-content">
+    <div id="main-content" class="container">
         <header>
-            <div class="logo"><u>🤖 <em>HHS Robotics Club</em> 🤖</u></div>
-            <div class="image-container"><section style="border: 5px solid crimson;"><img src="RoboticsLogo.png" alt="LogoIcon"></section></div>
-            <h1 style="font-family: 'Courier New', Courier, monospace;"><em>Engineering success, one brick at a time</em></h1>
+            <div class="logo">🤖 <em>HHS Robotics Club</em> 🤖</div>
+            <div class="image-container">
+                <img src="RoboticsLogo.png" alt="HHS Robotics Club Logo">
+            </div>
+            <h1><em>Engineering success, one brick at a time</em></h1>
         </header>
 
         <section class="what-is-robotics">
-            <h2 style="font-size: 35px;"><u>What is Robotics?</u></h2>
-            <p style="font-size: 24px;">
+            <h2>What is Robotics?</h2>
+            <p>
                 Robotics is the <strong>intersection of science, engineering, and technology</strong> that produces machines called robots. At Henderson High School Robotics Club, we explore how robots can be programmed to perform tasks and solve problems through:
             </p>
-            <ul style="font-size: 24px;">
+            <ul>
                 <li><strong>Mechanical design</strong> - Building robot structures</li>
                 <li><strong>Electrical systems</strong> - Powering and controlling robots</li>
                 <li><strong>Computer programming</strong> - Giving robots intelligence</li>
@@ -38,88 +255,92 @@
         </section>
 
         <section class="latest-News">
-            <h2 style="font-size: 35px;"><u>Latest Club News</u></h2>
-            <p style="font-size: 24px;">
-                As of June 12th 2025, our club has been researching the new map teased by the FLL (FIRST Lego League) youtoube channel. Diving deep into the missions being showcased in the teaser, our team looks for clues
-                on how to solve these missions.
+            <h2>Latest Club News</h2>
+            <p>
+                As of June 12th 2025, our club has been researching the new map teased by the FLL (FIRST Lego League) YouTube channel. Diving deep into the missions being showcased in the teaser, our team looks for clues on how to solve these missions.
             </p>
         </section>
 
         <section class="Comp-updates">
-            <h2 style="font-size: 35px;"><u>Competition Updates</u></h2>
-            <p style="font-size: 24px;">
+            <h2>Competition Updates</h2>
+            <p>
                 The <strong>2025-2026 FIRST LEGO League</strong> has revealed their new season theme: <strong>UNEARTHED</strong>. The competition map features a desert landscape with ancient ruins, suggesting challenges around construction and archaeology.
             </p>
             <div class="image-container">
-                <img style="border: 5px solid crimson;" src="https://info.firstinspires.org/hs-fs/hubfs/2026%20Season/Season%20Assets/first_age_fll_unearthed_logo_vertical_rgb_fullcolor.png?width=206&height=206&name=first_age_fll_unearthed_logo_vertical_rgb_fullcolor.png" alt="FIRST LEGO League Competition">
+                <img src="https://info.firstinspires.org/hs-fs/hubfs/2026%20Season/Season%20Assets/first_age_fll_unearthed_logo_vertical_rgb_fullcolor.png?width=206&height=206&name=first_age_fll_unearthed_logo_vertical_rgb_fullcolor.png" alt="FIRST LEGO League UNEARTHED Logo">
             </div>
-            <p style="text-align: center;"><a href="https://www.youtube.com/watch?v=exWkcUBS0j8" target="_blank" class="custom-link">
-                Watch Season Reveal Video
-            </a></p>
+            <p class="back-to-top">
+                <a href="https://www.youtube.com/watch?v=exWkcUBS0j8" target="_blank" class="custom-link">
+                    Watch Season Reveal Video
+                </a>
+            </p>
         </section>
 
         <section class="why-you-should-join">
-            <h2 style="font-size: 35px;"><u>Why Join Robotics Club?</u></h2>
-            <p style="font-size: 24px;">
+            <h2>Why Join Robotics Club?</h2>
+            <p>
                 Our club gives students <strong>hands-on experience with real robotics systems</strong>. You'll learn:
             </p>
-            <ul style="font-size: 24px;">
+            <ul>
                 <li><strong>How to design and build functional robots.</strong></li>
                 <li><strong>Programming logic and computational thinking.</strong></li>
                 <li>Engineering principles through LEGO robotics.</li>
                 <li>Teamwork and competition strategies.</li>
             </ul>
-            <p style="font-size: 24px;">
+            <p>
                 <em>At year's end, top teams compete in inter-school tournaments with the chance to advance to Nationals!</em>
             </p>
             <div class="image-container">
-                <img style="border: 5px solid crimson;" src="https://www.hhs.school.nz/wp-content/uploads/2024/11/Lego-Competition-28Nov24-600x600.jpg" alt="Henderson High School Robotics">
+                <img src="https://www.hhs.school.nz/wp-content/uploads/2024/11/Lego-Competition-28Nov24-600x600.jpg" alt="Henderson High School Robotics Competition">
             </div>
         </section>
 
-        <section style="text-align: center;" class="final">
-            <h2 style="font-size: 35px;"><u>Join the Henderson Hawks!</u></h2>
-            <p style="font-size: 28px; font-weight: bold;">
+        <section class="final">
+            <h2>Join the Henderson Hawks!</h2>
+            <p>
                 After school every Wednesday at Henderson High School T-Block T1.
             </p>
-            <p>
+            <p class="back-to-top">
                 <a href="https://www.hhs.school.nz/technology-and-21st-century-learning/" target="_blank" class="custom-link">
-                    <span class="icon"></span>🤖 Visit Our school technology Page 🤖
+                    🤖 Visit Our School Technology Page 🤖
                 </a>
                 <a href="#meet-the-team" class="custom-link">
-                    <span class="icon"></span>👥 Team Roles 👥
+                    👥 Team Roles 👥
                 </a>
-                <p style="text-align: center;"><a class="custom-link" href="#main-content">⬆️ Back to home ⬆️</a></p>
+            </p>
+            <p class="back-to-top">
+                <a class="custom-link" href="#main-content">⬆️ Back to Top ⬆️</a>
             </p>
         </section>
     </div>
 
     <!-- Spike-FLL -->
-
-    <div id="spike-fll">
+    <div id="spike-fll" class="container">
         <header>
-            <div class="logo" style="font-size: 48px; color: black;" ><u>🧩 <em>SPIKE Prime & FLL Challenges</em> 🧩</u></div>
-            <img src="https://static.wixstatic.com/media/398287_26feb164eac6475d8f26eaf16db50d52~mv2.png/v1/fill/w_640,h_224,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/398287_26feb164eac6475d8f26eaf16db50d52~mv2.png" alt="FLL-Logo">
-            <h1 style="font-family: 'Courier New', Courier, monospace;"><em>Our tools for robotic innovation</em></h1>
+            <div class="logo">🧩 <em>SPIKE Prime & FLL Challenges</em> 🧩</div>
+            <div class="image-container">
+                <img src="https://static.wixstatic.com/media/398287_26feb164eac6475d8f26eaf16db50d52~mv2.png/v1/fill/w_640,h_224,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/398287_26feb164eac6475d8f26eaf16db50d52~mv2.png" alt="FLL Logo">
+            </div>
+            <h1><em>Our tools for robotic innovation</em></h1>
         </header>
 
-        <section style="border-left: 5px solid gold;">
-            <h2 style="font-size: 35px;"><u>LEGO Education SPIKE Prime System</u></h2>
-            <div class="image-container" style="float: right; margin-left: 20px;">
-                <img style="border: 5px solid crimson;" src="https://yt3.googleusercontent.com/NGmdzU7LNgBBh8jPunr5DN6oHUtDUOM1o9UNGzhEyfjSiDpoGqvLXyVakqHFdd69CozfUm3T=s900-c-k-c0x00ffffff-no-rj" alt="SPIKE Prime Set" width="300">
+        <section>
+            <h2>LEGO Education SPIKE Prime System</h2>
+            <div class="image-container" style="float: right; margin-left: 20px; max-width: 300px;">
+                <img src="https://yt3.googleusercontent.com/NGmdzU7LNgBBh8jPunr5DN6oHUtDUOM1o9UNGzhEyfjSiDpoGqvLXyVakqHFdd69CozfUm3T=s900-c-k-c0x00ffffff-no-rj" alt="SPIKE Prime Set">
             </div>
-            <p style="font-size: 24px;">
+            <p>
                 The <strong>SPIKE Prime</strong> system is LEGO Education's flagship robotics platform that we use in our club. It combines:
             </p>
-            <ul style="font-size: 24px;">
+            <ul>
                 <li><strong>Colorful LEGO building elements</strong> - For durable, creative constructions</li>
                 <li><strong>Programmable Hub</strong> - The brain of the robot with 6 input/output ports</li>
                 <li><strong>Motors and sensors</strong> - Including force, color, distance and gyro sensors</li>
                 <li><strong>Drag-and-drop coding interface</strong> - Based on Scratch with Python options</li>
             </ul>
         
-            <h3 style="font-size: 28px;">Why We Use SPIKE Prime:</h3>
-            <ul style="font-size: 24px;">
+            <h3>Why We Use SPIKE Prime:</h3>
+            <ul>
                 <li>Perfect balance of simplicity for beginners and complexity for advanced users</li>
                 <li>Seamless transition from block coding to text-based Python programming</li>
                 <li>Robust hardware designed specifically for classroom and competition use</li>
@@ -127,33 +348,33 @@
             </ul>
         </section>
 
-        <section style="border-left: 5px solid cyan;">
-            <h2 style="font-size: 35px;"><u>FIRST LEGO League Challenges</u></h2>
-            <p style="font-size: 24px;">
+        <section>
+            <h2>FIRST LEGO League Challenges</h2>
+            <p>
                 Each year, <strong>FIRST LEGO League (FLL)</strong> releases a new themed challenge with two components:
             </p>
         
             <div class="challenge-box robot-game">
-                <h3 style="font-size: 28px; color: #d35400;">🤖 Robot Game 🤖</h3>
-                <p style="font-size: 24px;">
+                <h3>🤖 Robot Game 🤖</h3>
+                <p>
                     Teams build and program autonomous robots to complete missions on a 4'x8' field mat:
                 </p>
-                <ul style="font-size: 24px;">
+                <ul>
                     <li>3-5 missions must be completed in 2.5 minutes</li>
                     <li>Scoring based on precision, efficiency, and innovation</li>
                     <li>2025-2026 theme: <strong>UNEARTHED</strong> (archaeology focus)</li>
                 </ul>
                 <div class="image-container">
-                    <img style="border: 5px solid crimson;" src="https://firstwa.org/wp-content/uploads/2023/07/FLL-New-6-scaled.jpg" alt="FLL Competition Field" width="500">
+                    <img src="https://firstwa.org/wp-content/uploads/2023/07/FLL-New-6-scaled.jpg" alt="FLL Competition Field">
                 </div>
             </div>
         
             <div class="challenge-box innovation-project">
-                <h3 style="font-size: 28px; color: #27ae60;">💡 Innovation Project 💡</h3>
-                <p style="font-size: 24px;">
+                <h3>💡 Innovation Project 💡</h3>
+                <p>
                     Teams research and develop solutions to real-world problems related to the season's theme:
                 </p>
-                <ul style="font-size: 24px;">
+                <ul>
                     <li>Identify a specific problem within the theme</li>
                     <li>Design an innovative solution</li>
                     <li>Present findings to judges (5 minute presentation)</li>
@@ -162,220 +383,239 @@
             </div>
         </section>
 
-        <section style="border-left: 5px solid magenta;">
-            <h2 style="font-size: 35px;"><u>FLL Competition Structure</u></h2>
-            <p style="font-size: 24px;">
+        <section>
+            <h2>FLL Competition Structure</h2>
+            <p>
                 Teams are judged in four key areas during tournaments:
             </p>
         
             <div class="judging-categories">
                 <div class="category">
-                    <h3 style="font-size: 26px;">1. Robot Design</h3>
-                    <p style="font-size: 22px;">
+                    <h3>1. Robot Design</h3>
+                    <p>
                         Evaluation of mechanical construction, programming sophistication, and strategy
                     </p>
                 </div>
             
                 <div class="category">
-                    <h3 style="font-size: 26px;">2. Robot Performance</h3>
-                    <p style="font-size: 22px;">
+                    <h3>2. Robot Performance</h3>
+                    <p>
                         Scoring based on completed missions during competition matches
                     </p>
                 </div>
             
                 <div class="category">
-                    <h3 style="font-size: 26px;">3. Innovation Project</h3>
-                    <p style="font-size: 22px;">
+                    <h3>3. Innovation Project</h3>
+                    <p>
                         Quality of research, creativity of solution, and presentation skills
                     </p>
                 </div>
             
                 <div class="category">
-                    <h3 style="font-size: 26px;">4. Core Values</h3>
-                    <p style="font-size: 22px;">
+                    <h3>4. Core Values</h3>
+                    <p>
                         Demonstration of teamwork, gracious professionalism, and learning spirit
                     </p>
                 </div>
             </div>
         
-            <p style="font-size: 24px; margin-top: 20px;">
+            <p>
                 <strong>Tournament progression:</strong> Local → Regional → National → World Festival
             </p>
-            <p style="text-align: center;"><a class="custom-link" href="#main-content">⬆️ Back to home ⬆️</a></p>
+            <p class="back-to-top">
+                <a class="custom-link" href="#main-content">⬆️ Back to Top ⬆️</a>
+            </p>
         </section>
     </div>
-
 
     <!-- Meet The Team Section -->
-    <div id="meet-the-team">
+    <div id="meet-the-team" class="container">
         <header>
-            <div class="logo"><u>🤖 <em>Team Roles</em> 🤖</u></div>
-            <div class="image-container"><section style="border: 5px solid crimson;"><img src="https://www.hhs.school.nz/wp-content/uploads/2024/12/Robotics-Club-5Dec24-V2-scaled.jpg" alt="LogoIcon"></section></div>
-            <h1 style="font-family: 'Courier New', Courier, monospace;"><em>Our Robotics Club Roles</em></h1>
+            <div class="logo">🤖 <em>Team Roles</em> 🤖</div>
+            <div class="image-container">
+                <img src="https://www.hhs.school.nz/wp-content/uploads/2024/12/Robotics-Club-5Dec24-V2-scaled.jpg" alt="HHS Robotics Team">
+            </div>
+            <h1><em>Our Robotics Club Roles</em></h1>
         </header>
-        <section class="team-container1">
+        
+        <section>
             <div class="team-container">
-                <div class="team-member builder" style="background-color: lightpink; border-top: 5px solid magenta;">
+                <div class="team-member">
                     <h2 class="role-title">🛠 BUILDER 🛠</h2>
-                    <p style="font-size: 20px;">
+                    <p>
                         The <strong>Builders</strong> are the hands-on engineers of our team. They:
-                        <ul style="font-size: 20px; text-align: left;">
-                            <li>Design and construct the physical robot structure</li>
-                            <li>Select and assemble mechanical components</li>
-                            <li>Test and optimize robot movement and functionality</li>
-                            <li>Solve physical engineering challenges</li>
-                            <li>Work with LEGO Technic and other building systems</li>
-                        </ul>
                     </p>
+                    <ul>
+                        <li>Design and construct the physical robot structure</li>
+                        <li>Select and assemble mechanical components</li>
+                        <li>Test and optimize robot movement and functionality</li>
+                        <li>Solve physical engineering challenges</li>
+                        <li>Work with LEGO Technic and other building systems</li>
+                    </ul>
                 </div>
 
-                <div class="team-member coder" style="background-color: lightblue;">
+                <div class="team-member">
                     <h2 class="role-title">💻 CODER 💻</h2>
-                    <p style="font-size: 20px;">
+                    <p>
                         The <strong>Coders</strong> bring our robots to life through programming. They:
-                        <ul style="font-size: 20px; text-align: left;">
-                            <li>Write and debug robot control software</li>
-                            <li>Program autonomous routines and sensor integration</li>
-                            <li>Develop efficient algorithms for competition tasks</li>
-                            <li>Work with languages like Python, Java, or block coding</li>
-                            <li>Collaborate with builders to match code to hardware</li>
-                        </ul>
                     </p>
+                    <ul>
+                        <li>Write and debug robot control software</li>
+                        <li>Program autonomous routines and sensor integration</li>
+                        <li>Develop efficient algorithms for competition tasks</li>
+                        <li>Work with languages like Python, Java, or block coding</li>
+                        <li>Collaborate with builders to match code to hardware</li>
+                    </ul>
                 </div>
 
-                <div class="team-member manager" style="background-color: lightgreen; border-top: 5px solid green;">
+                <div class="team-member">
                     <h2 class="role-title">👑 MANAGER 👑</h2>
-                    <p style="font-size: 20px;">
+                    <p>
                         The <strong>Managers</strong> keep our team organized and focused. They:
-                        <ul style="font-size: 20px; text-align: left;">
-                            <li>Coordinate team schedules and meetings</li>
-                            <li>Manage competition logistics and documentation</li>
-                            <li>Facilitate communication between team members</li>
-                            <li>Track progress and help solve team challenges</li>
-                            <li>Organize resources and maintain equipment</li>
-                        </ul>
                     </p>
+                    <ul>
+                        <li>Coordinate team schedules and meetings</li>
+                        <li>Manage competition logistics and documentation</li>
+                        <li>Facilitate communication between team members</li>
+                        <li>Track progress and help solve team challenges</li>
+                        <li>Organize resources and maintain equipment</li>
+                    </ul>
                 </div>
             </div>
-        </section>
-
-        <section style="text-align: center;" class="team-container2">
-            <p style="font-size: 24px;">
+            
+            <p>
                 <strong>Every member</strong> contributes to our success, and students often rotate roles to gain experience in all areas of robotics!
             </p>
-            <p style="text-align: center;"><a class="custom-link" href="#main-content">⬆️ Back to home ⬆️</a></p>
+            <p class="back-to-top">
+                <a class="custom-link" href="#main-content">⬆️ Back to Top ⬆️</a>
+            </p>
         </section>
     </div>
 
-    <!-- Current -->
-
-    <div id="current-team">
+    <!-- Current Team Section -->
+    <div id="current-team" class="container">
         <header>
-            <div class="logo" style="font-size: 48px; color: black;" ><u>🤝 <em>Meet our team</em> 🤝</u></div>
-            <img src="" alt="Team-Logo">
-            <h1 style="font-family: 'Courier New', Courier, monospace;"><em>Our current team members</em></h1>
+            <div class="logo">🤝 <em>Meet our team</em> 🤝</div>
+            <h1><em>Our current team members</em></h1>
         </header>
-        <br></br>
-        <section style="border-left: 5px solid gold;">
-            <p style="font-size: 24px;">
-                All members of our team are <strong>valued immensly</strong>. This list includes new <em>and</em> old members of the crew. This section will introduce our current hard-working team.
+        
+        <section>
+            <p>
+                All members of our team are <strong>valued immensely</strong>. This list includes new <em>and</em> old members of the crew. This section will introduce our current hard-working team.
                 Starting with our expert designers!
             </p>
 
             <div class="team-container">
-                <div class="team-member builder">
+                <div class="team-member">
                     <h2 class="role-title">🛠️ <em>Builders</em> 🛠️</h2>
-                    <p style="font-size: 20px;">
+                    <p>
                         Our <strong>builders</strong> create top-notch robot designs that are kitted with gear to handle every type of mission it's faced with. So here we reveal our current masterminds in designing!
                     </p>
 
-                    <h2 style="font-size: 35px; text-align: left;">Builder 1: Erika Oldfield</h2>
-                    <img src="" alt="Member Image" style="text-align: left;">
+                    <div class="current-team-member">
+                        <h3>Erika Oldfield</h3>
+                        <p>Builder</p>
+                    </div>
 
-                    <h2 style="font-size: 35px; text-align: left;">Builder 2: Logan Te Rore Hollyman</h2>
-                    <img src="" alt="Member Image" style="text-align: left;">
+                    <div class="current-team-member">
+                        <h3>Logan Te Rore Hollyman</h3>
+                        <p>Builder</p>
+                    </div>
 
-                    <h2 style="font-size: 35px; text-align: left;">Builder 3: Cole Subritzky-Shandley</h2>
-                    <img src="" alt="Member Image" style="text-align: left;">
+                    <div class="current-team-member">
+                        <h3>Cole Subritzky-Shandley</h3>
+                        <p>Builder</p>
+                    </div>
                 </div>
                 
-                <div class="team-member coder">
+                <div class="team-member">
                     <h2 class="role-title">🖥️ <em>Coders</em> 🖥️</h2>
-                    <p style="font-size: 20px;">
+                    <p>
                         Next up is our group of computer specialists... Our <strong>coders!</strong> These people are the programmers of our robots, they help navigate the robots through
                         the missions, and have different programs set up for each mission. They're the ones who work hard on perfection with the builders!
                     </p>
 
-                    <h2 style="font-size: 35px; text-align: left;">Coder 1: Blake McCallum</h2>
-                    <img src="" alt="Member Image" style="text-align: left;">
+                    <div class="current-team-member">
+                        <h3>Blake McCallum</h3>
+                        <p>Coder</p>
+                    </div>
                 
-                    <h2 style="font-size: 35px; text-align: left;">Coder 2: Jayden Goundar</h2>
-                    <img src="" alt="Member Image" style="text-align: left;">
+                    <div class="current-team-member">
+                        <h3>Jayden Goundar</h3>
+                        <p>Coder</p>
+                    </div>
 
-                    <h2 style="font-size: 35px; text-align: left;">Coder 3: Finlay Craill</h2>
-                    <img src="" alt="Member Image" style="text-align: left;">
+                    <div class="current-team-member">
+                        <h3>Finlay Craill</h3>
+                        <p>Coder</p>
+                    </div>
 
-                    <h2 style="font-size: 35px; text-align: left;">Coder 4: Aria Khodaverdian</h2>
-                    <img src="" alt="Member Image" style="text-align: left;">
+                    <div class="current-team-member">
+                        <h3>Aria Khodaverdian</h3>
+                        <p>Coder</p>
+                    </div>
 
-                    <h2 style="font-size: 35px; text-align: left;">Coder 5: Zain Siddiqui</h2>
-                    <img src="" alt="Member Image" style="text-align: left;">
-
+                    <div class="current-team-member">
+                        <h3>Zain Siddiqui</h3>
+                        <p>Coder</p>
+                    </div>
                 </div>
 
-                <div class="team-member manager">
+                <div class="team-member">
                     <h2 class="role-title">👑 <em>Managers</em> 👑</h2>
-                    <p style="font-size: 20px;">
+                    <p>
                         Finally, we would now like to introduce our <strong>team managers</strong>. Our team managers are the people who direct both builders <em>and</em> programmers,
                         they're the ones who plan out and figure out strategies that help our team solve missions. They're also the ones who decide which mission comes first and which missions
                         slow us down or boost us ahead of other schools! 
                     </p>
 
-                    <h2 style="font-size: 35px; text-align: left;">Manager 1: Sonja Sakey</h2>
-                    <img src="" alt="Member Image" style="text-align: left;">
+                    <div class="current-team-member">
+                        <h3>Sonja Sakey</h3>
+                        <p>Manager</p>
+                    </div>
 
-                    <h2 style="font-size: 35px; text-align: left;">Manager 2: Raaky Gul</h2>
-                    <img src="" alt="Member Image" style="text-align: left;">
+                    <div class="current-team-member">
+                        <h3>Raaky Gul</h3>
+                        <p>Manager</p>
+                    </div>
 
-                    <h2 style="font-size: 35px; text-align: left;">Manager 3: Aaryan Rahul</h2>
-                    <img src="" alt="Member Image" style="text-align: left;">
+                    <div class="current-team-member">
+                        <h3>Aaryan Rahul</h3>
+                        <p>Manager</p>
+                    </div>
                 </div>
             </div>
         </section>
-        <br><br>
-        <section style="border-left: 5px solid cyan;">
-            <br><br>
-            <div style="font-size: 24px;">
+        
+        <section>
+            <p>
                 All members of Robotics Club are <strong>valued beyond imagination</strong> and each member of the team is included in every decision we make. Robotics Club isn't just a place to learn on its own,
                 it's also a place to get a <strong>feel of real time engineering and programming</strong>. No matter the skill level, Robotics Club is always open to everyone who wants to put their creativity to work.
-            </div>
-            <br><br>
-            <br><br>
-            <br><br>
-            <p style="font-size: 20px;"><strong>------------------------------------------------------------------------------------------</strong></p>
-            <br><br>
-            <div style="font-size: 35px;">Website Creator Credits:</div>
-            <div style="font-size: 20px;">
+            </p>
+            
+            <div class="credits">
+                <h3>Website Creator Credits:</h3>
                 <ul>
                     <li>Raaky Gul</li>
                     <li>Aaryan Rahul</li>
                 </ul>
             </div>
-            <br><br>
-            <p style="font-size: 20px;"><strong>------------------------------------------------------------------------------------------</strong></p>
-            <br><br>
-            <p style="text-align: center;"><a class="custom-link" href="#main-content">⬆️ Back to home ⬆️</a></p>
+            
+            <p class="back-to-top">
+                <a class="custom-link" href="#main-content">⬆️ Back to Top ⬆️</a>
+            </p>
         </section>
     </div>
 
-
     <script>
-        const colors = ["lightblue", "goldenrod", "lightpink"];
+        // Simple background color transition effect
+        const colors = ["#fff", "#FFD700", "#FFE4E1"];
         let index = 0;
+        
         setInterval(() => {
             document.body.style.backgroundColor = colors[index];
             index = (index + 1) % colors.length;
-        }, 3000);
+        }, 5000);
     </script>
 </body>
 </html>
