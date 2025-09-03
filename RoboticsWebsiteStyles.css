@@ -24,7 +24,7 @@
         body {
             font-family: 'Courier New', monospace;
             line-height: 1.6;
-            color: #333;
+            color: #000000;
             background-color: var(--background-white);
             transition: background-color 1s ease;
             padding: 0;
@@ -693,3 +693,4 @@
     </script>
 </body>
 </html>
+
