@@ -24,7 +24,7 @@
         body {
             font-family: 'Courier New', monospace;
             line-height: 1.6;
-            color: #000000;
+            color: #333;
             background-color: var(--background-white);
             transition: background-color 1s ease;
             padding: 0;
@@ -51,7 +51,7 @@
         }
         
         .custom-link {
-            color: var(--background-white);
+            color: #000000;
             text-decoration: none;
             margin: 0 15px;
             font-weight: bold;
@@ -693,4 +693,5 @@
     </script>
 </body>
 </html>
+
 
